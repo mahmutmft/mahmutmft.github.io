@@ -1,0 +1,205 @@
+:root {
+    --accent: #00a8ff;
+    --background: #0a1929;
+    --terminal-bg: rgba(0, 21, 40, 0.9);
+    --text: #e0e0e0;
+}
+
+body {
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    overflow: hidden;
+    color: var(--text);
+}
+
+#particles {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: transparent !important;
+}
+
+.terminal {
+    background: var(--terminal-bg);
+    border-radius: 12px;
+    width: 90%;
+    max-width: 1000px;
+    margin: 2rem auto;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    color: var(--text);
+}
+
+.terminal-header {
+    padding: 1rem;
+    background: rgba(0, 16, 31, 0.8);
+    border-radius: 12px 12px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.window-controls span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.close {
+    background: #ff5f56;
+}
+
+.minimize {
+    background: #ffbd2e;
+}
+
+.maximize {
+    background: #27c93f;
+}
+
+.title {
+    color: #6b7b8c;
+    font-weight: 500;
+}
+
+#datetime {
+    color: #6b7b8c;
+    font-size: 0.9em;
+}
+
+.terminal-body {
+    padding: 1.5rem;
+    min-height: 400px;
+}
+
+.static-content {
+    margin-bottom: 1.5rem;
+}
+
+.welcome-message {
+    font-size: 2em;
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, #00a8ff, #00ff88);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 1rem;
+}
+
+#command {
+    background: transparent;
+    border: none;
+    color: var(--text);
+    font-family: inherit;
+    font-size: 1.1em;
+    flex-grow: 1;
+    padding: 0.3rem;
+}
+
+#command:focus {
+    outline: none;
+}
+
+.cursor {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.project-link {
+    color: var(--accent);
+    text-decoration: none;
+    position: relative;
+}
+
+.project-link:hover::after {
+    content: " ↗";
+}
+
+.skill-badge {
+    display: inline-block;
+    padding: 0.3rem 0.8rem;
+    background: rgba(0, 168, 255, 0.1);
+    border-radius: 20px;
+    margin: 0.3rem;
+    border: 1px solid var(--accent);
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem;
+    border-radius: 50%;
+}
+
+.install-step {
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+    animation: terminal-appear 0.3s ease-out;
+}
+
+@keyframes terminal-appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.light-mode {
+    --background: #f0f0f0;
+    --terminal-bg: rgba(255, 255, 255, 0.9);
+    --text: #333;
+}
+
+.light-mode .terminal {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.gradient-text {
+    background: linear-gradient(45deg, var(--accent), #00ff88);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.light-mode {
+    --background: #f0f0f0;
+    --terminal-bg: rgba(255, 255, 255, 0.9);
+    --text: #333;
+    --accent: #0066cc;
+}
+
+.light-mode .gradient-text {
+    background: linear-gradient(45deg, var(--accent), #009966);
+}

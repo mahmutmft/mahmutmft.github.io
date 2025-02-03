@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahmut Miftaroski | DevSec Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="particles"></canvas>
+<div class="terminal">
+    <div class="terminal-header">
+        <div class="window-controls">
+            <span class="close"></span>
+            <span class="minimize"></span>
+            <span class="maximize"></span>
+        </div>
+        <div class="header-content">
+            <span class="title">mahmut@miftaroski:~</span>
+            <span id="datetime"></span>
+        </div>
+    </div>
+    <div class="terminal-body">
+        <div class="output">
+            <div class="static-content">
+                <p class="welcome-message">Welcome to <span class="gradient-text">my portfolio</span></p>
+                <p class="typewriter">Building the web, securing the future.</p>
+                <p class="typewriter">Type <span class="accent">"help"</span> for available commands</p>
+            </div>
+            <div class="command-history"></div>
+        </div>
+        <div class="input-line">
+            <span class="prompt gradient-text">></span>
+            <input type="text" id="command" autofocus>
+            <span class="cursor">|</span>
+        </div>
+    </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
