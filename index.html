@@ -3,41 +3,337 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mahmut Miftaroski</title>
+    <title>Mahmut Miftaroski | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<canvas id="particles"></canvas>
-<div class="terminal">
-    <div class="terminal-header">
-        <div class="window-controls">
-            <span class="close"></span>
-            <span class="minimize"></span>
-            <span class="maximize"></span>
-        </div>
-        <div class="header-content">
-            <span class="title">mahmut@miftaroski:~</span>
-            <span id="datetime"></span>
-        </div>
-    </div>
-    <div class="terminal-body">
-        <div class="output">
-            <div class="static-content">
-                <p class="welcome-message">Welcome to <span class="gradient-text">my portfolio</span></p>
-                <p class="typewriter">Building the web, securing the future.</p>
-                <p class="typewriter">Type <span class="accent">"help"</span> for available commands</p>
+    <div id="particles-js"></div>
+    <nav>
+        <div class="nav-content">
+            <a href="#" class="logo">
+                <img src="/assets/logo.jpg" alt="MM Logo">
+            </a>
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
             </div>
-            <div class="command-history"></div>
         </div>
-        <div class="input-line">
-            <span class="prompt gradient-text">></span>
-            <input type="text" id="command" autofocus>
-            <span class="cursor">|</span>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>Mahmut Miftaroski</h1>
+            <p class="subtitle">Computer Science Student @ FINKI</p>
+            <p class="description">Focused on Cybersecurity & Web Development</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn primary">Get in Touch</a>
+                <a href="#projects" class="btn secondary">View Projects</a>
+            </div>
         </div>
-    </div>
-</div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="script.js"></script>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p class="main-desc">Hey there! 👋 I'm a 2nd-year Computer Science student at FINKI, surviving one debugging session at a time. When I'm not battling with algorithms or trying to understand why my code works (or doesn't), I'm diving into:</p>
+                
+                <div class="interests">
+                    <div class="interest-item">
+                        <i class="fas fa-globe"></i>
+                        <span>Web Development</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-robot"></i>
+                        <span>Discord Bots</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Cybersecurity</span>
+                    </div>
+                    <div class="interest-item">
+                        <i class="fas fa-cogs"></i>
+                        <span>Automation</span>
+                    </div>
+                </div>
+                
+                <p class="journey">Currently exploring the realms of ethical hacking and building bots that make life easier (when they work). Also trying to figure out why FINKI exams feel like boss battles in Dark Souls ⚔️</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fab fa-discord"></i>
+                        <h3>XPander RPG Bot</h3>
+                    </div>
+                    <p>A feature-rich Discord bot that transforms servers into immersive RPG experiences. Currently in development with features like leveling, economy, and quest systems.</p>
+                    <div class="tech-stack">
+                        <span>Node.js</span>
+                        <span>Discord.js</span>
+                        <span>SQLite</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status in-progress">In Development</span>
+                    </div>
+                    <a href="https://github.com/mahmutmft/XPander" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-robot"></i>
+                        <h3>FINKI Scraper</h3>
+                    </div>
+                    <p>Automated web scraping solution for FINKI's course directory. Features real-time data collection, dark mode, and keyboard shortcuts for efficient navigation.</p>
+                    <div class="tech-stack">
+                        <span>Node.js</span>
+                        <span>Puppeteer</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="https://github.com/mahmutmft/finki-scraper-app" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-code"></i>
+                        <h3>FINKI CodeHub</h3>
+                    </div>
+                    <p>My academic journey repository containing coursework, assignments, and projects from various Computer Science courses at FINKI.</p>
+                    <div class="tech-stack">
+                        <span>Java</span>
+                        <span>C++</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                    <a href="https://github.com/mahmutmft/FINKI-CodeHub" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>PDF File Forwarder</h3>
+                    </div>
+                    <p>A powerful Discord bot that automatically forwards PDF files between channels with beautiful embed messages. Features smart PDF detection, secure configuration, and robust error handling.</p>
+                    <div class="tech-stack">
+                        <span>Node.js</span>
+                        <span>Discord.js</span>
+                        <span>File Management</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status">Released v1.1.0</span>
+                    </div>
+                    <a href="https://github.com/mahmutmft/pdf-file-forwarder" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>CyberVault</h3>
+                    </div>
+                    <p>A collection of ethical hacking tools and security simulations for educational purposes. Features keyloggers, malware simulations, and network sniffers in a controlled environment.</p>
+                    <div class="tech-stack">
+                        <span>Python</span>
+                        <span>Security</span>
+                        <span>Networking</span>
+                    </div>
+                    <div class="project-status">
+                        <span class="status in-progress">Active Development</span>
+                    </div>
+                    <a href="https://github.com/mahmutmft/CyberVault" class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2>Skills & Learning</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items languages">
+                        <div class="language-item primary">
+                            <i class="fab fa-js"></i>
+                            <div class="language-info">
+                                <span>JavaScript</span>
+                                <small>Main Focus • Web Development</small>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <i class="fab fa-python"></i>
+                            <div class="language-info">
+                                <span>Python</span>
+                                <small>Basic Scripts & Automation</small>
+                            </div>
+                        </div>
+                        <div class="language-item">
+                            <i class="fab fa-java"></i>
+                            <div class="language-info">
+                                <span>Java</span>
+                                <small>Learning Backend Development</small>
+                            </div>
+                        </div>
+                        <div class="language-item secondary">
+                            <i class="fas fa-code"></i>
+                            <div class="language-info">
+                                <span>C++</span>
+                                <small>Academic Experience</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Currently Learning</h3>
+                    <div class="skill-items learning">
+                        <div class="learning-item">
+                            <i class="fab fa-react"></i>
+                            <span>React</span>
+                            <small>Frontend Development</small>
+                        </div>
+                        <div class="learning-item">
+                            <i class="fab fa-docker"></i>
+                            <span>Docker</span>
+                            <small>Containerization</small>
+                        </div>
+                        <div class="learning-item">
+                            <i class="fas fa-leaf"></i>
+                            <span>Spring</span>
+                            <small>Backend Development</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Security Interest</h3>
+                    <div class="skill-items security">
+                        <p class="security-description">
+                            Exploring cybersecurity fundamentals through:
+                        </p>
+                        <div class="security-points">
+                            <span>• Basic penetration testing</span>
+                            <span>• Web security fundamentals</span>
+                            <span>• Self-directed learning</span>
+                            <span>• CTF challenges</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tools">
+        <div class="container">
+            <h2>My Digital Playground</h2>
+            <div class="tools-grid">
+                <div class="tool-category" data-command="alias yeet='rm -rf'">
+                    <h3>IDEs & Editors</h3>
+                    <div class="tools-list">
+                        <div class="tool-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                            <small>Where Ctrl+S is my best friend 💾</small>
+                        </div>
+                        <div class="tool-item premium">
+                            <i class="fas fa-crown"></i>
+                            <span>JetBrains Suite</span>
+                            <small>Thanks FINKI for the premium experience! 🎓</small>
+                        </div>
+                        <div class="tool-item vim">
+                            <i class="fas fa-terminal"></i>
+                            <span>Neovim</span>
+                            <small>Still figuring out how to exit... :q! 😅</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tool-category" data-command="sudo apt-get install coffee">
+                    <h3>Operating Systems</h3>
+                    <div class="tools-list">
+                        <div class="tool-item">
+                            <i class="fab fa-ubuntu"></i>
+                            <span>Ubuntu</span>
+                            <small>sudo make me-a-sandwich 🥪</small>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-fedora"></i>
+                            <span>Fedora</span>
+                            <small>dnf install peace-of-mind 🎩</small>
+                        </div>
+                        <div class="tool-item">
+                            <i class="fab fa-windows"></i>
+                            <span>Windows</span>
+                            <small>For gaming and Windows-only pain 🎮</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <a href="mailto:mahmutmft@gmail.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    mahmutmft@gmail.com
+                </a>
+                <a href="https://github.com/mahmutmft" class="contact-item" target="_blank">
+                    <i class="fab fa-github"></i>
+                    GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Mahmut Miftaroski. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00a8ff" },
+                opacity: { value: 0.5, random: false },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00a8ff",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: false,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false,
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" },
+                    resize: true
+                }
+            },
+            retina_detect: true
+        });
+    </script>
 </body>
 </html>
